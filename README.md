@@ -7,4 +7,4 @@ Todos are stored locally on the device for quick access.
 - Android Room for local database to store todos
 
 
-![Frame 1@3x](https://user-images.githubusercontent.com/13452864/114364213-390ede80-9b8a-11eb-8bc6-d3651110a4b0.png =250x250)
+![Frame 1@3x](https://user-images.githubusercontent.com/13452864/114364213-390ede80-9b8a-11eb-8bc6-d3651110a4b0.png | width=100)
