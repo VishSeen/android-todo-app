@@ -8,4 +8,4 @@ Todos are stored locally on the device for quick access.
 
 
 ### Designs
-![Frame 1@3x](https://user-images.githubusercontent.com/13452864/114364213-390ede80-9b8a-11eb-8bc6-d3651110a4b0.png)
+![frame](https://user-images.githubusercontent.com/13452864/114491270-69f12100-9c27-11eb-9017-8e8e6f9e7fc0.png)
