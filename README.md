@@ -8,6 +8,6 @@ Todos are stored locally on the device for quick access.
 
 
 ### Designs
-- UI designed made in Figma app
+- UI/UX designed made in Figma app
 
 ![frame](https://user-images.githubusercontent.com/13452864/114491270-69f12100-9c27-11eb-9017-8e8e6f9e7fc0.png)
