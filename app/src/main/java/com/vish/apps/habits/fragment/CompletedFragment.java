@@ -1,4 +1,4 @@
-package com.vish.apps.habits;
+package com.vish.apps.habits.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.vish.apps.habits.adapters.MyItemRecyclerViewAdapter;
-import com.vish.apps.habits.dummy.DummyContent;
+import com.vish.apps.habits.R;
 
 /**
  * A fragment representing a list of Items.
@@ -64,7 +63,7 @@ public class CompletedFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS));
+//            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS));
         }
         return view;
     }

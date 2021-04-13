@@ -1,6 +1,6 @@
 package com.vish.apps.habits.adapters;
 
-import android.util.Log;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vish.apps.habits.R;
-import com.vish.apps.habits.model.Todo;
+import com.vish.apps.habits.model.TodoEntity;
+import com.vish.apps.habits.object.Todo;
 import com.vish.apps.habits.recycleview.RecyclerViewHolder;
 
 import java.util.List;
-import java.util.Random;
 
 public class TodoAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
-    private List<Todo> mListTodo;
+    private Context mContext;
+    private List<TodoEntity> mListTodo;
 
-    public TodoAdapter(List<Todo> listTodo) {
+    public TodoAdapter(Context context, List<TodoEntity> listTodo) {
+        mContext = context;
         mListTodo = listTodo;
     }
 
@@ -37,12 +39,18 @@ public class TodoAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
-        holder.getRadioButton().setText(mListTodo.get(position).getTitle());
+        holder.getRadioButton().setText(mListTodo.get(position).mTitle);
     }
 
     @Override
     public int getItemCount() {
         return mListTodo.size();
     }
+
+    public void setTodoList(List<TodoEntity> listTodos) {
+        mListTodo = listTodos;
+        notifyDataSetChanged();
+    }
+
 }
 
