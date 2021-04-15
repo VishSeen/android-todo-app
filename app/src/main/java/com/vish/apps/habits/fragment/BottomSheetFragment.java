@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.vish.apps.habits.R;
+import com.vish.apps.habits.model.TodoDao;
 import com.vish.apps.habits.model.TodoDatabase;
 import com.vish.apps.habits.model.TodoEntity;
 
@@ -47,13 +48,17 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
             public void onClick(View view) {
                 String todoTitle = edtTitle.getText().toString();
                 saveTodo(todoTitle, 0, false);
+
+                dismiss();
             }
         });
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().finish();
+                deleteAll();
+
+                dismiss();
             }
         });
 
@@ -71,6 +76,14 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
         todo.mCategory = category;
         todo.mIsDone = isDone;
 
-        todoDatabase.todoDao().insertTodo(todo);
+        TodoDao todoDao = todoDatabase.todoDao();
+        todoDao.insertTodo(todo);
+    }
+
+    private void deleteAll() {
+        TodoDatabase todoDatabase = TodoDatabase.getDbInstance(getActivity().getApplicationContext());
+
+        TodoDao todoDao = todoDatabase.todoDao();
+        todoDao.deleteAll();
     }
 }

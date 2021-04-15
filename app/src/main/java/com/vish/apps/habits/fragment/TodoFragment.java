@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import com.vish.apps.habits.R;
 import com.vish.apps.habits.adapters.TodoAdapter;
 import com.vish.apps.habits.model.TodoDatabase;
 import com.vish.apps.habits.model.TodoEntity;
-import com.vish.apps.habits.object.Todo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +65,8 @@ public class TodoFragment extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.fragment_todo_recycle_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(dividerItemDecoration);
         todoAdapter = new TodoAdapter(getContext(), mListTodo);
         recyclerView.setAdapter(todoAdapter);
 
@@ -79,7 +79,7 @@ public class TodoFragment extends Fragment {
     // Loads every items in the local database
     public void loadTodoList() {
         TodoDatabase todoDatabase = TodoDatabase.getDbInstance(getContext());
-        List<TodoEntity> listTodos = todoDatabase.todoDao().getAllTodo();
+        List<TodoEntity> listTodos = todoDatabase.todoDao().getTodo();
         todoAdapter.setTodoList(listTodos);
     }
 }

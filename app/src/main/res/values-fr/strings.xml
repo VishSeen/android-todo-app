@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Habits</string>
+    <string name="logo_name">habits</string>
+
+    <!-- act main -->
+    <string name="act_main_img_btn_search_content_desc">Bouton de recherche de tâches</string>
+    <string name="act_main_fab_content_desc">Bouton Ajouter des tâches</string>
+    <string name="act_main_bottom_nav_todo">Faire</string>
+    <string name="act_main_bottom_nav_completed">Complété</string>
+
+    <!-- Bottom sheet -->
+    <string name="bottom_sheet_add_habit_text_add_habit">Ajoutez une tâche ici..</string>
+    <string name="bottom_sheet_select_category">Choisir une catégorie:</string>
+    <string name="bottom_sheet_chip_personal">personnel</string>
+    <string name="bottom_sheet_chip_shopping">achats</string>
+    <string name="bottom_sheet_chip_important">important</string>
+    <string name="bottom_sheet_chip_other">autre</string>
+    <string name="bottom_sheet_btn_cancel">Annuler</string>
+    <string name="bottom_sheet_btn_add">Ajouter</string>
+
+
+    <!-- Empty state fragment -->
+    <string name="fragment_empty_state_icon_content_desc">Aucune tâche trouvée image</string>
+    <string name="fragment_empty_state_title">Ajouter une tâche</string>
+    <string name="fragment_empty_state_sub">Aucune tâche trouvée. Commencez à ajouter en appuyant sur le bouton jaune ci-dessous.</string>
+</resources>

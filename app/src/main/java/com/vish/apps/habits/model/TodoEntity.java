@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey;
 public class TodoEntity {
 
     @PrimaryKey(autoGenerate = true)
+//    @ColumnInfo(name = "todo_id")
     public int mId;
 
     @ColumnInfo(name = "todo_title")

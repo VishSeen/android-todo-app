@@ -5,6 +5,8 @@
     <!-- act main -->
     <string name="act_main_img_btn_search_content_desc">Search tasks button</string>
     <string name="act_main_fab_content_desc">Add tasks button</string>
+    <string name="act_main_bottom_nav_todo">TODO</string>
+    <string name="act_main_bottom_nav_completed">COMPLETED</string>
 
     <!-- Bottom sheet -->
     <string name="bottom_sheet_add_habit_text_add_habit">Add habit here..</string>
@@ -13,9 +15,12 @@
     <string name="bottom_sheet_chip_shopping">shopping</string>
     <string name="bottom_sheet_chip_important">important</string>
     <string name="bottom_sheet_chip_other">other</string>
+    <string name="bottom_sheet_btn_cancel">Cancel</string>
+    <string name="bottom_sheet_btn_add">Add</string>
 
 
     <!-- Empty state fragment -->
+    <string name="fragment_empty_state_icon_content_desc">No task found image</string>
     <string name="fragment_empty_state_title">Add a task</string>
     <string name="fragment_empty_state_sub">No tasks found.. Start adding by pressing the yellow plus button below.</string>
 </resources>
